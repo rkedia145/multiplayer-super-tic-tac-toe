@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e6fd27e78b7d4c0b03670139b18c5b9",
+    "revision": "ab86cbe6bd80cf01b4d728c4cd5c063f",
     "url": "/multiplayer-super-tic-tac-toe/index.html"
   },
   {
-    "revision": "5b58185f6604dc85aa74",
+    "revision": "77c77a266473fa7132dd",
     "url": "/multiplayer-super-tic-tac-toe/static/css/main.1f1107aa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/multiplayer-super-tic-tac-toe/static/js/2.e9eab4eb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b58185f6604dc85aa74",
-    "url": "/multiplayer-super-tic-tac-toe/static/js/main.98c6fdb4.chunk.js"
+    "revision": "77c77a266473fa7132dd",
+    "url": "/multiplayer-super-tic-tac-toe/static/js/main.fcc5ea4f.chunk.js"
   },
   {
     "revision": "7585d7a635ceaad57f33",
