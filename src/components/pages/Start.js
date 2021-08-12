@@ -41,6 +41,7 @@ class Start extends React.Component {
 
 
     componentWillUnmount(){
+        console.log("Unmounting, so disconnecting....")
         this.socket.disconnect()
     }
 

@@ -43,6 +43,7 @@ class SuperBoard extends Component {
     const {room, name} = qs.parse(window.location.search, {
       ignoreQueryPrefix: true
      })
+    console.log("About to set room: ", room, name)
     this.setState({room})
     this.socket.emit('newRoomJoin', {room, name})
 
@@ -51,7 +52,7 @@ class SuperBoard extends Component {
     this.socket.on('waiting', ()=> this.setState({waiting:true, currentPlayerScore:0, opponentPlayer:[]}))
     this.socket.on('starting', ({gameState, players, turn})=> {
       this.setState({waiting:false})
-      this.gameStart(gameState, players, turn)
+      this.gameStart(gameState, players)
     })
     this.socket.on('joinError', () => this.setState({joinError: true}))
 
@@ -71,11 +72,11 @@ class SuperBoard extends Component {
   }
 
   //Setting the states to start a game when new user join
-  gameStart(gameState, players, turn){
+  gameStart(gameState, players){
     const opponent = players.filter(([id, name]) => id!==this.socketID)[0][1]
     this.setState({opponentPlayer: [opponent, 0], end:false})
     this.setBoard(gameState)
-    this.setTurn(turn)
+    this.setTurn(gameState.turn)
     this.setMessage()
   }
 
